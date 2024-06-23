@@ -6,7 +6,7 @@ import Header from "@/components/navigation/header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Next.js 14 Image Gallery",
+  title: "Next Gallery",
   description:
     "Next.js 14.2.4 Image Gallery showcasing the latest Next functionality and features.",
 };

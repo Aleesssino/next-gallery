@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 
 import {
@@ -12,8 +13,11 @@ import {
 import { AlignRight } from "lucide-react";
 import { navLinks } from "./navigationLinks";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function ActionNavbar() {
+  const pathname = usePathname();
+
   return (
     <div>
       <div className="md:hidden">
@@ -29,15 +33,20 @@ export default function ActionNavbar() {
                     <ul>
                       {navLinks.map((link) => (
                         <li key={link.href}>
-                          <Link href={link.href} className="text-stone-400">
-                            <Button variant="action" size="lg">
+                          <Link href={link.href}>
+                            <Button
+                              variant={
+                                pathname === link.href ? "active" : "link"
+                              }
+                              size="lg"
+                            >
                               {link.label}
                             </Button>
                           </Link>
                         </li>
                       ))}
                     </ul>
-                  </nav>{" "}
+                  </nav>
                 </div>
               </SheetDescription>
             </SheetHeader>
