@@ -1,16 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-
-const navLinks = [
-  {
-    href: "/",
-    label: "Home",
-  },
-  {
-    href: "/smth",
-    label: "smth",
-  },
-];
+import ActionNavbar from "./actionNavbar";
+import { navLinks } from "./navigationLinks";
+import { Button } from "../ui/button";
 
 export default function Header() {
   return (
@@ -26,17 +18,16 @@ export default function Header() {
       </Link>
 
       <nav>
-        <ul className="flex gap-x-5 text-[14px]">
+        <ul className=" gap-x-5 text-[14px] hidden md:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
               <Link href={link.href} className="text-stone-400">
-                <button className="w-auto h-auto  rounded-md py-[2px] px-[10px] hover:bg-zinc-800">
-                  {link.label}
-                </button>
+                <Button variant="action"> {link.label}</Button>
               </Link>
             </li>
           ))}
         </ul>
+        <ActionNavbar />
       </nav>
     </header>
   );
