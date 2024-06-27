@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/sheet";
 
 import { AlignRight } from "lucide-react";
-import { navLinks } from "./navigationLinks";
+import { navLinks } from "./navLinks";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
