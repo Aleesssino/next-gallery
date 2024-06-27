@@ -2,22 +2,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import ActionNavbar from "./actionNavbar";
-import { navLinks } from "./navigationLinks";
+import { navLinks } from "./navLinks";
 import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
+import Logo from "../../../public/Logo.jpeg";
 
 export default function Header() {
   const pathname = usePathname();
-
   return (
     <header className="flex justify-between items-center py-2 md:px-52 px-4 border-b border-b-stone-800 bg-opacity-55">
       <Link href="/">
         <Image
-          src="/Logo.jpeg"
+          src={Logo}
           alt="Logo"
           width="35"
           height="35"
           className="w-[35px] h-[35px] rounded-md"
+          priority
         />
       </Link>
 
