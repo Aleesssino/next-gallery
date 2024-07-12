@@ -3,27 +3,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { TImage } from "@/models/TImages";
 
-export interface UnsplashImageProps {
-  imageData: TImage;
-  Width: number;
-  Height: number;
+import { fetchData, FetchType } from "@/lib/data";
+import { calculateImageSize } from "@/lib/utils";
+
+export interface fetchProps {
+  fetchType: FetchType;
 }
 
-import { FC } from "react";
-
-const UnsplashImage: FC<UnsplashImageProps> = ({
-  imageData,
-  Width,
-  Height,
-}) => {
+export default async function UnsplashImage({ fetchType }: fetchProps) {
+  const imageData = await fetchData(fetchType);
+  const { calculatedWidth, calculatedHeight } = calculateImageSize(imageData);
   return (
     <>
       <Image
         src={imageData.urls.raw}
         alt={imageData.description || "Image"}
-        width={Width}
-        height={Height}
-        className={`w-[${Width}] h-[${Height}] rounded-2xl shadow-white shadow-sm `}
+        width={calculatedWidth}
+        height={calculatedHeight}
+        className={`w-[${calculatedWidth}] h-[${calculatedHeight}] rounded-2xl shadow-white shadow-sm `}
         priority
       />
       <div className="text-center items-center md:px-52 pb-10">
@@ -39,6 +36,4 @@ const UnsplashImage: FC<UnsplashImageProps> = ({
       </div>
     </>
   );
-};
-
-export default UnsplashImage;
+}
