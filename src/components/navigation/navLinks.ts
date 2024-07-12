@@ -7,4 +7,8 @@ export const navLinks = [
     href: "/static",
     label: "static",
   },
+  {
+    href: "/dynamic",
+    label: "dynamic",
+  },
 ];
