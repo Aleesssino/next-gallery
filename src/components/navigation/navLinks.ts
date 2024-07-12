@@ -11,4 +11,8 @@ export const navLinks = [
     href: "/dynamic",
     label: "dynamic",
   },
+  {
+    href: "/isr",
+    label: "ISR",
+  },
 ];
