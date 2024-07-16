@@ -9,14 +9,15 @@ export function cn(...inputs: ClassValue[]) {
 export const calculateImageSize = (validatedImage: TImage) => {
   let size = 0;
   if (validatedImage.width > validatedImage.height) {
-    size = 600;
+    size = 900;
   } else {
-    size = 350;
+    size = 525;
   }
 
   const calculatedWidth = Math.min(size, validatedImage.width);
   const calculatedHeight =
     (calculatedWidth / validatedImage.width) * validatedImage.height;
+  const mobileSize = Math.min(size / 1.5, validatedImage.width);
 
-  return { calculatedWidth, calculatedHeight };
+  return { calculatedWidth, calculatedHeight, mobileSize };
 };
