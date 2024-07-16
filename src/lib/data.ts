@@ -8,7 +8,7 @@ export async function fetchStaticImageData() {
     );
 
     if (!response.ok) {
-      throw new Error("Failed to fetch Images");
+      throw new Error(`Failed to fetch Images... status: ${response.status}`);
     }
 
     const unValidatedImage: TImage = await response.json();
@@ -33,7 +33,7 @@ export async function fetchDynamicImageData() {
     );
 
     if (!response.ok) {
-      throw new Error("Failed to fetch Images");
+      throw new Error(`Failed to fetch Images... status: ${response.status}`);
     }
 
     const unValidatedImage: TImage = await response.json();
@@ -44,7 +44,7 @@ export async function fetchDynamicImageData() {
   } catch (error) {
     console.error("Error fetching or validating image data:", error);
 
-    throw new Error("Failed to fetch data.");
+    throw new Error(`Failed to fetch data...`);
   }
 }
 
@@ -58,7 +58,7 @@ export async function fetchISRimageData() {
     );
 
     if (!response.ok) {
-      throw new Error("Failed to fetch Images");
+      throw new Error(`Failed to fetch Images... status: ${response.status}`);
     }
 
     const unValidatedImage: TImage = await response.json();
