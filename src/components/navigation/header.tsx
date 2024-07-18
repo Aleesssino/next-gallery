@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import ActionNavbar from "./actionNavbar";
@@ -18,7 +19,7 @@ export default function Header() {
           width="35"
           height="35"
           className="w-[35px] h-[35px] rounded-md"
-          priority
+          priority={true}
         />
       </Link>
 
