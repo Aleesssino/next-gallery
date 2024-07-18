@@ -21,3 +21,8 @@ export const calculateImageSize = (validatedImage: TImage) => {
 
   return { calculatedWidth, calculatedHeight, mobileSize };
 };
+
+// Create blurred Image Placeholder
+export const getPlaceholderImageURL = (imageURL: string) => {
+  return `/_next/image?url=${encodeURIComponent(imageURL)}&q=1&w=8&h=8`;
+};
