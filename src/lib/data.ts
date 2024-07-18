@@ -44,7 +44,7 @@ export async function fetchDynamicImageData() {
   } catch (error) {
     console.error("Error fetching or validating image data:", error);
 
-    throw new Error(`Failed to fetch data...status: ${Response}`);
+    throw new Error(`Failed to fetch data...: ${Response}`);
   }
 }
 
