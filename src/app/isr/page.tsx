@@ -11,7 +11,7 @@ export default async function Page() {
   return (
     <div className="flex flex-col  px-5 content-center justify-center items-center pt-10">
       <InfoCard> This page uses incremantal static regenration.</InfoCard>
-      <Suspense fallback="loading...">
+      <Suspense fallback="Loading...">
         <UnsplashImage fetchType={"isr"} />
       </Suspense>
     </div>
