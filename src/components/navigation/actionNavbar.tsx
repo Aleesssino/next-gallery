@@ -26,30 +26,27 @@ export default function ActionNavbar() {
             <AlignRight />
           </SheetTrigger>
           <SheetContent>
-            <SheetHeader>
-              <SheetDescription>
-                <div className="flex text-lg flex-col items-start space-y-5 mt-10">
-                  <nav>
-                    <ul>
-                      {navLinks.map((link) => (
-                        <li key={link.href}>
-                          <Link href={link.href}>
-                            <Button
-                              variant={
-                                pathname === link.href ? "active" : "link"
-                              }
-                              size="lg"
-                            >
-                              {link.label}
-                            </Button>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </nav>
-                </div>
-              </SheetDescription>
-            </SheetHeader>
+            <SheetTitle></SheetTitle>
+            <SheetHeader></SheetHeader>
+            <SheetDescription></SheetDescription>
+            <div className="flex text-lg flex-col items-start space-y-5 mt-10">
+              <nav>
+                <ul>
+                  {navLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href}>
+                        <Button
+                          variant={pathname === link.href ? "active" : "link"}
+                          size="lg"
+                        >
+                          {link.label}
+                        </Button>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
           </SheetContent>
         </Sheet>
       </div>
