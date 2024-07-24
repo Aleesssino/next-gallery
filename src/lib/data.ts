@@ -4,7 +4,7 @@ import { ImageSchema, TImage } from "@/models/TImages";
 export async function fetchStaticImageData() {
   try {
     const response = await fetch(
-      `https://api.unsplash.com/photos/random?client_id=${process.env.UNSPLASH_ACCESS_KEY}`,
+      `https://api.unsplash.com/photos/random?client_id=${process.env.UNSPLASH_ACCESS_KEY}&w=900`,
       { cache: "force-cache" },
     );
 
@@ -28,7 +28,7 @@ export async function fetchStaticImageData() {
 export async function fetchDynamicImageData() {
   try {
     const response = await fetch(
-      `https://api.unsplash.com/photos/random?client_id=${process.env.UNSPLASH_ACCESS_KEY}`,
+      `https://api.unsplash.com/photos/random?client_id=${process.env.UNSPLASH_ACCESS_KEY}&w=900`,
       // {cache: 'no-store'} to prevent the response from being cached
       { cache: "no-store" },
     );
@@ -53,7 +53,7 @@ export async function fetchDynamicImageData() {
 export async function fetchISRimageData() {
   try {
     const response = await fetch(
-      `https://api.unsplash.com/photos/random?client_id=${process.env.UNSPLASH_ACCESS_KEY}`,
+      `https://api.unsplash.com/photos/random?client_id=${process.env.UNSPLASH_ACCESS_KEY}&w=900`,
       // this will trigger cache after 15 seconds - same like add export const revalidate = 15 at the top of a page
       { next: { revalidate: 15 } },
     );
