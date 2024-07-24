@@ -5,6 +5,7 @@ export async function fetchStaticImageData() {
   try {
     const response = await fetch(
       `https://api.unsplash.com/photos/random?client_id=${process.env.UNSPLASH_ACCESS_KEY}`,
+      { cache: "force-cache" },
     );
 
     if (!response.ok) {
