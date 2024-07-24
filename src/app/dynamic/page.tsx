@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   title: "Dynamic fetching - Next Gallery",
 };
 
+export const dynamic = "force-dynamic";
+
 export default async function Page() {
   return (
     <div className="flex flex-col  px-5 content-center justify-center items-center pt-10">
