@@ -4,7 +4,7 @@ import { ImageSchema, TImage } from "@/models/TImages";
 export async function fetchStaticImageData() {
   try {
     const response = await fetch(
-      `https://api.unsplash.com/photos/random?client_id=${process.env.UNSPLASH_ACCESS_KEY}&w=900`,
+      `https://api.unsplash.com/photos/random?client_id=${process.env.UNSPLASH_ACCESS_KEY}`,
       { cache: "force-cache" },
     );
 
