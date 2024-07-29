@@ -17,7 +17,6 @@ export default async function UnsplashImage({ fetchType }: fetchProps) {
       <Image
         placeholder={"blur"}
         blurDataURL={getPlaceholderImageURL(imageData.urls.raw)}
-        loading="lazy"
         src={`${imageData.urls.raw}?w=${calculatedWidth}`}
         alt={imageData.description || "Image"}
         className={`w-[${calculatedWidth}] h-[${calculatedHeight}] rounded-2xl shadow-white shadow-sm `}
