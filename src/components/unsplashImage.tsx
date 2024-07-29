@@ -15,14 +15,15 @@ export default async function UnsplashImage({ fetchType }: fetchProps) {
   return (
     <>
       <Image
+        placeholder={"blur"}
+        blurDataURL={getPlaceholderImageURL(imageData.urls.raw)}
+        loading="lazy"
         src={`${imageData.urls.raw}?w=${calculatedWidth}`}
         alt={imageData.description || "Image"}
         className={`w-[${calculatedWidth}] h-[${calculatedHeight}] rounded-2xl shadow-white shadow-sm `}
         sizes={`(max-width: 768px) ${mobileSize}px, (max-width: 1200px) ${calculatedWidth}px, ${calculatedWidth}px`}
         width={calculatedWidth}
         height={calculatedHeight}
-        placeholder={"blur"}
-        blurDataURL={getPlaceholderImageURL(imageData.urls.raw)}
         priority={true}
       />
       <div className="text-center items-center md:px-52 pb-10">
