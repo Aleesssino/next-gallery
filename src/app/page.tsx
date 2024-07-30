@@ -27,7 +27,6 @@ export default function Home() {
           getting errors if you try too often.
         </p>
       </InfoCard>
-      <div className="w-96 h-[800px] bg-stone-400"></div>
     </main>
   );
 }
