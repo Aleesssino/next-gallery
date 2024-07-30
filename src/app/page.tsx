@@ -22,7 +22,7 @@ export default function Home() {
 
         <p>Exploring Next.js 14 through a simple, elegant image showcase.</p>
 
-        <p className="text-stone-400">
+        <p className="text-stone-400 pt-2">
           Unsplash has a free quota of 50 requests per hour so you might start
           getting errors if you try too often.
         </p>
