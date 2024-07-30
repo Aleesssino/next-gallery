@@ -1,7 +1,7 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 
 interface InfoCardProps {
-  children: string;
+  children: ReactNode;
 }
 
 const InfoCard: FC<InfoCardProps> = ({ children }) => {
