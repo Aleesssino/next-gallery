@@ -6,8 +6,6 @@ export default function Home() {
       <h1 className="font-bold mb-5 text-4xl md:text-5xl">Next Gallery</h1>
       <InfoCard>
         <section>
-          <h2 className="text-bold text-lg">About</h2>
-
           <p>
             This project showcases Next.js 14&apos;s app router and its key
             features:
@@ -23,10 +21,7 @@ export default function Home() {
 
           <p>The website utilizes the Unsplash API for image content.</p>
 
-          <p>
-            Next Gallery: Exploring Next.js 14 and TailwindCSS through a simple,
-            elegant image showcase.
-          </p>
+          <p>Exploring Next.js 14 through a simple, elegant image showcase.</p>
         </section>
       </InfoCard>
     </main>
