@@ -10,7 +10,12 @@ export const metadata: Metadata = {
 export default async function Page() {
   return (
     <div className="flex flex-col  px-5 content-center justify-center items-center pt-10">
-      <InfoCard> This page uses incremantal static regenration.</InfoCard>
+      <InfoCard>
+        {" "}
+        This page uses incremental static regeneration. A new image is fetched
+        every 15 seconds (after refreshing the page) and then served from the
+        cache for that duration.
+      </InfoCard>
       <Suspense fallback="Loading...">
         <UnsplashImage fetchType={"isr"} />
       </Suspense>
