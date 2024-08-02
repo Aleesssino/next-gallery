@@ -19,6 +19,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "hover:bg-zinc-800 text-stone-400",
         active: "bg-zinc-700 text-stone-200",
+        secondaryActive: "text-stone-50",
       },
       size: {
         default: "w-auto h-auto  rounded-md py-[2px] px-[10px]",

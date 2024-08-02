@@ -36,7 +36,9 @@ export default function ActionNavbar() {
                     <li key={link.href}>
                       <Link href={link.href}>
                         <Button
-                          variant={pathname === link.href ? "active" : "link"}
+                          variant={
+                            pathname === link.href ? "secondaryActive" : "link"
+                          }
                           size="lg"
                         >
                           {link.label}
