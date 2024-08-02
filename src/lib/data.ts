@@ -18,8 +18,9 @@ export async function fetchStaticImageData() {
     const validatedImage = ImageSchema.parse(unValidatedImage);
     return validatedImage;
   } catch (error) {
-    console.error("Error fetching or validating image data:", error);
-
+    if (error instanceof Error) {
+      console.error("Error fetching or validating image data:", error.message);
+    }
     throw new Error("Failed to fetch data.");
   }
 }
@@ -43,8 +44,9 @@ export async function fetchDynamicImageData() {
     const validatedImage = ImageSchema.parse(unValidatedImage);
     return validatedImage;
   } catch (error) {
-    console.error("Error fetching or validating image data:", error);
-
+    if (error instanceof Error) {
+      console.error("Error fetching or validating image data:", error.message);
+    }
     throw new Error(`Failed to fetch data...: ${Response}`);
   }
 }
@@ -68,8 +70,9 @@ export async function fetchISRimageData() {
     const validatedImage = ImageSchema.parse(unValidatedImage);
     return validatedImage;
   } catch (error) {
-    console.error("Error fetching or validating image data:", error);
-
+    if (error instanceof Error) {
+      console.error("Error fetching or validating image data:", error.message);
+    }
     throw new Error("Failed to fetch data.");
   }
 }
