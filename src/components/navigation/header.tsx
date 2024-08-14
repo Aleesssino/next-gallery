@@ -11,7 +11,7 @@ import Logo from "../../../public/Logo.jpeg";
 export default function Header() {
   const pathname = usePathname();
   return (
-    <header className="flex justify-between items-center py-2 md:px-52 px-4 border-b border-b-stone-800  sticky top-0 bg-opacity-55 backdrop-blur-sm">
+    <header className="flex justify-between items-center py-2 md:px-52 px-4 border-b border-b-stone-800  sticky top-0 bg-opacity-55 backdrop-blur-sm z-[1000]">
       <Link href="/">
         <Image
           src={Logo}
