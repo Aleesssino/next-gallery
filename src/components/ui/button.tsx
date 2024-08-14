@@ -17,7 +17,7 @@ const buttonVariants = cva(
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "hover:bg-zinc-800 text-stone-400",
+        link: "hover:bg-zinc-800 text-stone-400 outline-none",
         active: "bg-zinc-700 text-stone-200",
         secondaryActive: "text-stone-50",
       },
