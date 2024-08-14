@@ -17,7 +17,7 @@ export default async function Page() {
         get a new image from the Unsplash API.
       </InfoCard>
       <Suspense fallback="Loading...">
-        <UnsplashImage fetchType={"dynamic"} />
+        <UnsplashImage fetchTypeOption={"dynamic"} />
       </Suspense>
     </div>
   );

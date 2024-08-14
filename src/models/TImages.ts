@@ -10,5 +10,5 @@ export const ImageSchema = z.object({
 });
 
 export const GalleryImageSchema = z.array(ImageSchema);
-export type Tgallery = z.infer<typeof GalleryImageSchema>;
+export type TGallery = z.infer<typeof GalleryImageSchema>;
 export type TImage = z.infer<typeof ImageSchema>;

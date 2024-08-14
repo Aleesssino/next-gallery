@@ -17,7 +17,7 @@ export default async function Page() {
         cache for that duration.
       </InfoCard>
       <Suspense fallback="Loading...">
-        <UnsplashImage fetchType={"isr"} />
+        <UnsplashImage fetchTypeOption={"isr"} />
       </Suspense>
     </div>
   );

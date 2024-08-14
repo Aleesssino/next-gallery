@@ -78,9 +78,9 @@ export async function fetchISRimageData() {
 }
 
 // conditional fetch
-export type FetchType = "static" | "dynamic" | "isr";
-export async function fetchData(fetchType: FetchType): Promise<TImage> {
-  switch (fetchType) {
+export type TFetchType = "static" | "dynamic" | "isr";
+export async function fetchData(fetchTypeOption: TFetchType): Promise<TImage> {
+  switch (fetchTypeOption) {
     case "static":
       return fetchStaticImageData();
     case "dynamic":
@@ -89,6 +89,6 @@ export async function fetchData(fetchType: FetchType): Promise<TImage> {
       return fetchISRimageData();
 
     default:
-      throw new Error(`Unsupported fetch type: ${fetchType}`);
+      throw new Error(`Unsupported fetch type: ${fetchTypeOption}`);
   }
 }

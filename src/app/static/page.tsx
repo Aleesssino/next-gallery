@@ -16,7 +16,7 @@ export default async function Page() {
         refreshing the page until we compile the project again.
       </InfoCard>
       <Suspense fallback="Loading...">
-        <UnsplashImage fetchType={"static"} />
+        <UnsplashImage fetchTypeOption={"static"} />
       </Suspense>
     </div>
   );
