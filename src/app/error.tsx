@@ -19,7 +19,9 @@ export default function Error({
     <div>
       <main className="text-center pt-32 px-5 ">
         <h2>Oi.. Something went wrong!</h2>
-        <h2>{error.message}</h2>
+        {
+          //         <h2>{error.message}</h2>
+        }
         <div className=" mb-10"></div>
         <Button
           variant={"destructive"}

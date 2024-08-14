@@ -1,8 +1,6 @@
 import InfoCard from "@/components/infoCard";
 import dynamic from "next/dynamic";
-// import ZoomParallaxWrapper from "../components/parallax/zoomParallaxWrapper";
 
-// Dynamically import the ZoomParallaxWrapper component to use it client-side
 const ZoomParallaxWrapper = dynamic(
   () => import("../components/parallax/zoomParallaxWrapper"),
   {
