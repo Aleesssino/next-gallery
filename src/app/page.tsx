@@ -1,4 +1,14 @@
 import InfoCard from "@/components/infoCard";
+import dynamic from "next/dynamic";
+// import ZoomParallaxWrapper from "../components/parallax/zoomParallaxWrapper";
+
+// Dynamically import the ZoomParallaxWrapper component to use it client-side
+const ZoomParallaxWrapper = dynamic(
+  () => import("../components/parallax/zoomParallaxWrapper"),
+  {
+    ssr: false, // Disable server-side rendering for this component
+  },
+);
 
 export default function Home() {
   return (
@@ -26,6 +36,13 @@ export default function Home() {
           Unsplash has a free quota of 50 requests per hour so you might start
           getting errors if you try too often.
         </p>
+      </InfoCard>
+      <ZoomParallaxWrapper />
+      <InfoCard>
+        <div className="text-stone-400">
+          <p>Created by Aleesssino</p>
+          <p>2024</p>
+        </div>
       </InfoCard>
     </main>
   );
