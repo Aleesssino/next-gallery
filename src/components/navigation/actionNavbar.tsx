@@ -20,7 +20,7 @@ export default function ActionNavbar() {
 
   return (
     <div>
-      <div className="md:hidden">
+      <div className="md:hidden z-100">
         <Sheet>
           <SheetTrigger>
             <AlignRight />
@@ -29,7 +29,7 @@ export default function ActionNavbar() {
             <SheetTitle></SheetTitle>
             <SheetHeader></SheetHeader>
             <SheetDescription></SheetDescription>
-            <div className="flex text-lg flex-col items-start space-y-5 mt-10">
+            <div className="flex text-lg flex-col items-start space-y-5 mt-10 z-[1500]">
               <nav>
                 <ul>
                   {navLinks.map((link) => (
