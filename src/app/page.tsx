@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 const ZoomParallaxWrapper = dynamic(
   () => import("../components/parallax/zoomParallaxWrapper"),
   {
-    ssr: false, // Disable server-side rendering for this component
+    ssr: false,
   },
 );
 
