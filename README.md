@@ -35,12 +35,12 @@ To run this project locally and explore its features, follow these steps:
 1. Clone the repository:
 
    ```
-   git clone https://github.com/your-username/nextjs-14-showcase.git
+   git clone https://github.com/Aleesssino/next-gallery.git
    ```
 
 2. Navigate to the project directory:
    ```
-   cd nextjs-14-showcase
+   cd next-gallery
    ```
 3. Install the dependencies:
 
