@@ -44,9 +44,9 @@ To run this project locally and explore its features, follow these steps:
    ```
 3. Install the dependencies:
 
-```
- pnpm install
-```
+   ```
+   pnpm install
+   ```
 
 ### Set up environment variables:
 
